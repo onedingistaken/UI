@@ -1,0 +1,165 @@
+body {
+    background-color: rgb(238, 238, 238);
+    /* background-color: rgb(190, 190, 190); */
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* heading */
+#main-heading {
+    margin: 5px auto;
+    padding: 0;
+}
+
+#main-header a {
+    color: #000;
+    text-decoration: none;
+    font: italic bold 90% Georgia;
+}
+
+/* body */
+div {
+    font: 90% Helvetica;
+}
+
+#main-nav div h4 {
+    margin: 0, auto;
+    font: italic bold 90% Georgia;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* footer */
+#main-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#main-footer p{
+    background-color: #000;
+    color: #fff;
+    font: 50% Arial;
+    text-align: center;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+
+/* UIAllClasses */
+#main-container {
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav #newPost {
+    margin: 10px 3px;
+    padding: 5px;
+    /* overflow: hidden; */
+    /* border: solid 1px #000; */
+}
+
+#newPost h1 {
+    margin: 5px;
+    padding: 0;
+}
+
+/* assessment */
+#all-post {
+    margin: 0;
+    padding: 0;
+}
+
+.post {
+    margin: 5px 5px;
+    padding: 4px;
+    border: 1px solid rgb(99, 99, 99);
+    /* border-radius: 5px; */
+    overflow: hidden;
+}
+
+.post div, input {
+    margin: 2px;
+}
+
+.post .postAuthor {
+    font-size: 10px;
+    color: gray;
+}
+
+.post .postTitle {
+    font: italic bold 16px Georgia;
+    color: #000;
+}
+
+.post > .postBtn {
+    margin: 10px 0 0 0;
+}
+
+.post .postAllBtn .showComment, .addComment {
+    float: right;
+    /* display: inline-block; */
+}
+
+/* .oneComment .likeComment, .deleteComment {
+    float: right;
+} */
+
+.post .postAllBtn .allComments {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+.oneComment .oneCommentName, .oneCommentEmail {
+    display: inline-block;
+    color: gray;
+}
+
+.hidden {
+    border: 1px solid #000;
+    background-color: rgb(190, 190, 190);
+}
+
+.popup {
+    padding: 5px;
+    background-color: lightgrey;
+}
+
+.popup >.newDescription {
+    width: 60%;
+}
+
+.output {
+    display: inline-block;
+    border: 1px solid gray;
+    font: normal 12px verdana;
+    margin: 2px;
+    padding: 1px 5px;
+    justify-content: space-between;
+}
+
+.show {
+    display: inline-block;
+    font: bold 10px verdana;
+    margin: 2px;
+    padding: 1px 5px;
+    justify-content: space-between;
+}
+
+.commentThread {
+    margin: 0;
+    /* border: 1px solid rgb(99, 99, 99); */
+    background-color: rgb(209, 209, 209);
+}
+
+.postWindow {
+    margin: 0;
+    padding: 5px;
+    background-color: lightgray;
+}
