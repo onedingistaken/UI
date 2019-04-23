@@ -8,7 +8,7 @@ import EditPost from './EditPost';
 
 class Posts extends Component {
     state = {
-        editPostStatus: false
+        editPostStatus: {}
     }
     componentDidMount() {
         if (!this.props.posts.length) {
@@ -21,12 +21,19 @@ class Posts extends Component {
     likePost = (postId) => {
         this.props.dispatch(likePost(postId));
     }
-    editPost = (editedPost) => {
+    editPostStatue = (postId) => {
         this.setState((prevState) => {
             return {
-                editPostStatus: !prevState.editPostStatus
+                editPostStatus: {
+                    ...prevState.editPostStatus,
+                    [postId]: !prevState.editPostStatus[postId]
+                }
             }
-        });
+        })
+        // console.log(this.state.editPostStatus);
+    }
+    editPost = (editedPost) => {
+        this.editPostStatue(editedPost.id);
         this.props.dispatch(editPost(editedPost));
     }
     // showThreadOnClick = (postId) => {
@@ -41,7 +48,7 @@ class Posts extends Component {
                         <div className="btn-toolbar">
                             {/* <button className="btn btn-primary">Like</button> */}
                             <button className="btn btn-danger btn-sm" onClick={() => { this.deletePost(item.id) }}>Delete</button>
-                            <button className="btn btn-primary btn-sm" onClick={this.editPost}>Edit</button>
+                            <button className="btn btn-primary btn-sm" onClick={() => this.editPostStatue(item.id)}>Edit</button>
                             <button className="btn btn-success btn-sm" onClick={() => { this.likePost(item.id) }}>{item.liked === true ? "Liked ❤" : "Like"}</button>
                             {/* <button className="btn btn-primary btn-sm" onClick={() => { this.showThreadOnClick(item.id) }}> */}
                             <button className="btn btn-primary btn-sm">
@@ -49,7 +56,7 @@ class Posts extends Component {
                             </button>
                         </div>
                         {
-                            this.state.editPostStatus && (
+                            this.state.editPostStatus[item.id] && (
                                 <div>
                                     <br />
                                     <EditPost post={item} editPost={this.editPost} />

@@ -65,6 +65,14 @@ class Comments extends Component {
         } else {
             warnings.body = false;
         }
+        this.setState((prevState) => {
+            return {
+                warnings: {
+                    ...prevState.warnings,
+                    ...warnings
+                }
+            }
+        })
         if (this.state.comment.name && this.state.comment.email && this.state.comment.body) {
             this.props.dispatch(addComment(this.state.comment));
             this.setState({
@@ -108,16 +116,16 @@ class Comments extends Component {
                                     <div className="form-group">
                                         <input className="form-control" placeholder="Your Name.." name="name" value={this.state.comment.name}
                                             onChange={this.inputNewComment} />
-                                    </div>&nbsp;
+                                    </div>&emsp;
                                     <div className="form-group">
                                         <input className="form-control" placeholder="Your Email.." name="email" value={this.state.comment.email}
                                             onChange={this.inputNewComment} />
-                                    </div>&nbsp;
+                                    </div>&emsp;
                                     <div className="form-group">
                                         <input className="form-control" placeholder="Your Comment.." name="body" value={this.state.comment.body}
                                             onChange={this.inputNewComment} />
-                                    </div>&nbsp;
-                                    <button type="submit" className="btn btn-default">Submit</button>
+                                    </div>&emsp;
+                                    <button type="submit" className="btn btn-success btn-sm">Submit</button>
                                 </span>
                             </form>
                             {
@@ -132,7 +140,7 @@ class Comments extends Component {
                             }
                             {
                                 this.state.warnings.body && (
-                                    <EmptyInput target="Body" />
+                                    <EmptyInput target="Comment" />
                                 )
                             }
                             <hr />
