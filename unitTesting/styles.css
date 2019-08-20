@@ -1,0 +1,33 @@
+.input-panel {
+    width: 20%;
+}
+
+.input-panel label,
+.input-panel input {
+    margin : 4px 0;
+    display: block;
+    width  : 100%;
+}
+
+.btn {
+    background-color: sienna;
+    color           : white;
+    border          : 1px solid sienna;
+    padding         : 4px;
+    border-radius   : 2px;
+    margin          : 4px 0;
+}
+
+.user-list {
+    display       : flex;
+    flex-direction: column;
+    margin        : 1px;
+    list-style    : none;
+}
+
+.user-item {
+    padding: 10px;
+    border : 1px solid black;
+    margin : 10px;
+    width  : 30%;
+}

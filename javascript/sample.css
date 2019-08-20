@@ -1,0 +1,7 @@
+p:first-line {
+    background-color: yellow;
+}
+
+p:first-child {
+    background-color: yellow;
+}

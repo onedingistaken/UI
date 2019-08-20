@@ -1,0 +1,13 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env", // compile ES6
+            {
+                "targets": {
+                    "node": "current" // current for ES6; 5 for ES5
+                }
+            }
+        ],
+        "@babel/preset-react" // JSX TO JS
+    ]
+}

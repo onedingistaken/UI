@@ -76,3 +76,4 @@ function map2Props(store) {
 }
 
 export default connect(map2Props)(Posts);
+

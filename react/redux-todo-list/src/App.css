@@ -1,0 +1,100 @@
+.App {
+  text-align : center;
+  font-family: 'Avenir Next', Times, serif;
+}
+
+/* .App-logo {
+  animation     : App-logo-spin infinite 20s linear;
+  height        : 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height      : 100vh;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  font-size       : calc(10px + 2vmin);
+  color           : white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.AddTodo {
+  margin          : 0;
+  padding         : 30px;
+  background-color: red;
+}
+
+.AddTodo>label {
+  margin: 0;
+  font  : normal bold 24px Times;
+  color : white;
+}
+
+.AddTodo>form {
+  display       : flex;
+  flex-direction: row;
+  margin        : 10px 0 0 0;
+  height        : 30px;
+}
+
+.AddTodo>form>input {
+  padding: 0 10px;
+  height : 100%;
+  width  : 90%;
+  border : none;
+}
+
+.AddTodo>form>button {
+  margin          : 0;
+  float           : right;
+  height          : 100%;
+  width           : 20%;
+  background-color: lightgrey;
+  border          : none;
+}
+
+.TodoList {
+  margin : 0;
+  padding: 0;
+}
+
+.TodoList div,
+td {
+  width : 100%;
+  height: 30px;
+}
+
+.TodoList td {
+  text-align  : left;
+  padding-left: 40px;
+}
+
+.TodoList tr:nth-child(odd) {
+  background-color: lightyellow;
+}
+
+.TodoList tr:nth-child(even) {
+  background-color: lightgrey;
+}
+
+.TodoList button {
+  background-color: inherit;
+  border          : none;
+  overflow        : hidden;
+  outline         : none;
+}

@@ -1,0 +1,126 @@
+.App {
+  text-align : center;
+  font-family: serif;
+}
+
+.App-logo {
+  animation     : App-logo-spin infinite 20s linear;
+  height        : 10vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height      : 12vh;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  font-size       : calc(10px + 2vmin);
+  color           : white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------- */
+
+.Add {
+  margin          : 0;
+  padding         : 20px;
+  background-color: red;
+  text-align      : center;
+}
+
+.Add h2 {
+  margin: 0 0 5px 0;
+  color : white;
+}
+
+.Add .input-container {
+  margin         : 0;
+  padding        : 0;
+  display        : flex;
+  justify-content: center;
+}
+
+.Add input {
+  padding: 10px;
+  border : none;
+  width  : 80%;
+}
+
+.Add button {
+  margin          : 0;
+  border          : none;
+  background-color: lightgray;
+  float           : right;
+  width           : 20%;
+  font-size       : 100%;
+}
+
+.Add button:hover {
+  background-color: #adadad;
+}
+
+.Add button:active {
+  background-color: #bdbcbc;
+  /* transform       : translateY(4px); */
+}
+
+/* -------------------------------- */
+
+.Todo {
+  margin           : 0;
+  /* padding       : 20px; */
+  text-align       : center;
+  display          : flex;
+  flex-direction   : column;
+}
+
+.Todo .todo {
+  margin             : 0;
+  padding            : 5px;
+  display            : flex;
+  text-align         : left;
+  /* justify-content : center; */
+}
+
+.Todo .todo:nth-child(2n) {
+  background-color: #ececec;
+}
+
+.Todo .todo:hover {
+  background-color: #adadad;
+}
+
+.Todo .todo:active {
+  background-color: #bdbcbc;
+  /* box-shadow      : 0 5px #666666; */
+  /* transform       : translateY(4px); */
+}
+
+.Todo .todo label {
+  margin : 0;
+  padding: 10px 30px;
+  width  : 86%;
+}
+
+.Todo .todo button {
+  margin          : 0;
+  padding         : 10px;
+  border          : none;
+  background-color: inherit;
+  font-size       : 90%;
+}

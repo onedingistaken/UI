@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Feature Test</title>
+    <link rel="stylesheet" href="features.css">
+</head>
+
+<body>
+    <div>
+        <p class="feature_type">Toggle</p>
+        <input type="button" value="Hide" id="toggle_btn" />
+        <p id="toggle_msg">You can see this message!</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Inline/External Scripting</p>
+        <!-- <p onclick="alert('This works!')">Click this sentence!</p> -->
+        <!-- <p onclick="$(this).hide()">Click to hide!</p> -->
+        <p id="hide_msg">Click to hide!</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Document Ready Event</p>
+        <p id="faded_msg" style="display:none">Ready to show</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Load</p>
+        <img id="my-pic" src="myPic.jpg" alt="myPic" width="100px">
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Window Load</p>
+        <!-- <iframe src="Amazon.com.html" frameborder="0"></iframe>
+        <iframe src="eBay.html" frameborder="0"></iframe> -->
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Window Unload</p>
+        <a href="Google.html">Google</a>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Selectors</p>
+        <div id="select_div">
+            <p>tag1</p>
+            <span>tag2</span>
+            <input type="button" value="tag3">
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class=" feature_type">ID selectors</p>
+        <div id="id_selector">
+            <input id="select_input" type="text" value="input value">
+            <p id="select_p">p value</p>
+            <input id="select_button" type="button" value="click me">
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Element selectors</p>
+        <div id="element_selector">
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class=" feature_type">Submit selector</p>
+        <div id="submit_selector">
+            <input id="btn1" type="button" value="btn1">
+            <input id="btn2" type="button" value="btn2">
+            <input id="btn3" type="submit" value="btn3">
+            <input id="btn4" type="submit" value="btn4">
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Text selector</p>
+        <div id="text_selector">
+            <input id="text1" type="text">
+            <textarea name="text2" id="text2" cols="10"
+                rows="5">:text doesn't work for textarea but :input does</textarea>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">CSS manipulater</p>
+        <div id="css_manipulater">
+            <input type="button" value="click to highlight">
+            <p>some text</p>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Multiple selectors</p>
+        <div id="multiple_selectors">
+            <input type="button" value="click to alert">
+            <p>click to alert</p>
+        </div>
+
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">This selector</p>
+        <div id="this_selector">
+            <input type="button" value="click to disable">
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Even/odd selectors</p>
+        <div id="even_odd_selectors">
+            <table class="tb">
+                <tr>
+                    <td>row0</td>
+                </tr>
+                <tr>
+                    <td>row1</td>
+                </tr>
+                <tr>
+                    <td>row2</td>
+                </tr>
+                <tr>
+                    <td>row3</td>
+                </tr>
+                <tr>
+                    <td>row4</td>
+                </tr>
+                <tr>
+                    <td>row5</td>
+                </tr>
+                <tr>
+                    <td>row6</td>
+                </tr>
+                <tr>
+                    <td>row7</td>
+                </tr>
+            </table>
+            <div class="span_tags">
+                <span>span0</span>
+                <span>span1</span>
+                <span>span2</span>
+                <span>span3</span>
+                <span>span4</span>
+                <span>span5</span>
+                <span>span6</span>
+                <span>span7</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Attribute selectors</p>
+        <div id="attribute_selectors">
+            <p>Name: <input type="text"></p>
+            <p>Email: <input type="email" size="30" placeholder="please type your email here.."></p>
+            <p>Comfirm Email: <input type="email" size="30" placeholder="please type your email here.."></p>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Contains selector</p>
+        <div id="contains_selector">
+            
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <div>
+        <p class="feature_type">Ready</p>
+    </div>
+    <hr>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="features.js"></script>
+</body>
+
+</html>
