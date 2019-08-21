@@ -1,51 +1,104 @@
 .App {
+  box-sizing: border-box;
   background-color: #ececec;
-  margin          : 0;
-  padding         : 20px 40px;
-  height          : 100hv;
-  font-family     : Arial, Helvetica, sans-serif;
-
+  padding: 20px 40px;
+  height: 100vh;
+  font-family: sans-serif;
 }
 
-.Header h2 {
+.Header h3 {
   margin-bottom: 0;
 }
 
 .Header p {
-  font-size    : 12px;
+  font-size: 12px;
   margin-bottom: 20px;
 }
 
-.Devices {
-  background-color  : #ffffff;
-  box-shadow        : 0 0 3px #ccc;
-  -moz-box-shadow   : 0 0 3px #ccc;
-  -webkit-box-shadow: 0 0 3px #ccc;
-  -o-box-shadow     : 0 0 3px #ccc;
-  box-sizing        : border-box;
-  width             : 100%;
-  border-radius     : 3px;
+.Header p a {
+  text-decoration: none;
 }
 
-.Device td {
-  padding      : 20px;
-  font-size    : 12px;
+.Devices {
+  background-color: #ffffff;
+  padding: 0;
+  box-shadow: 0 0 3px #ccc;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  -o-box-shadow: 0 0 3px #ccc;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.Device {
+  font-weight: normal;
+  font-size: 11px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.device__simple {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
   border-bottom: 1px solid #ececec;
 }
 
-.Device td:last-child {
-  text-align: end;
+.device__simple > span {
+  width: 400px;
 }
 
-.Device .device-name {
-  font-size  : 16px;
-  font-weight: bold;
+.device__simple .device__title {
+  display: flex;
+  align-items: center;
+}
+
+.device__simple .device__device {
+  font-weight: 800;
+  font-size: 15px;
 }
 
 .currentDevice {
-  background-color: lightgray;
-  font-size       : 11px;
-  margin-left     : 10px;
-  border-radius   : 2px;
-  padding         : 2px 4px;
+  background-color: #dddddd;
+  margin-left: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.Device .device__buttons {
+  text-align: end;
+}
+
+.Device .device__buttons a {
+  text-decoration: none;
+}
+
+.details {
+  padding: 20px;
+  border-bottom: 1px solid #ececec;
+  background-color: #f7f7f7;
+  box-shadow: 1 1 3px #ccc;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  -o-box-shadow: 0 0 3px #ccc;
+  transition: trasform 0.6s ease;
+}
+
+.details li {
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details li span {
+  width: 400px;
 }
