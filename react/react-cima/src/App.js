@@ -15,7 +15,7 @@ function Device({ device, index, toggleCurrentDevice }) {
     </ul>
   );
   return (
-    <div className="Device">
+    <>
       <li className="device__simple" onClick={() => toggleCurrentDevice(index)}>
         <span className="device__title">
           <span className="device__device">{device.device}</span>
@@ -31,7 +31,7 @@ function Device({ device, index, toggleCurrentDevice }) {
         </span>
       </li>
       {device.currentDevice ? details : false}
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,36 @@
+.SimpleTodoList {
+  box-sizing: border-box;
+  background-color: #209cee;
+  padding: 20px 30px;
+  height: 100vh;
+}
+
+.todo-list {
+  background-color: #ececec;
+  width: 400px;
+  border-radius: 3px;
+  padding: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.Todo {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.TodoForm {
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  height: 2em;
+  width: 100%;
+}

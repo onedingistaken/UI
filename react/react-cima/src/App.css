@@ -32,9 +32,6 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-}
-
-.Device {
   font-weight: normal;
   font-size: 11px;
   font-family: Helvetica, Arial, sans-serif;

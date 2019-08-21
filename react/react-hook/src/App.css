@@ -1,36 +1,21 @@
 .App {
   box-sizing: border-box;
-  background-color: #209cee;
-  padding: 20px 30px;
+  background-color: #bccbde;
   height: 100vh;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.todo-list {
-  background-color: #ececec;
-  width: 400px;
-  border-radius: 3px;
-  padding: 5px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-}
-
-.Todo {
+.header {
   background-color: #fff;
-  border-radius: 3px;
-  margin-bottom: 5px;
-  padding: 5px 10px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
-.TodoForm {
+.Counter {
   background-color: #fff;
-  border: none;
-  border-radius: 3px;
-  padding: 20px 10px;
-  box-sizing: border-box;
-  height: 2em;
-  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
