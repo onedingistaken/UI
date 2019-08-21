@@ -1,46 +1,38 @@
 import React, { useState } from "react";
 import "./App.css";
 
-function TodoForm({ addNewTodo }) {
-  const [text, setText] = useState("");
-  const submitInput = e => {
-    e.preventDefault();
-    if (!text) return;
-    addNewTodo(text);
-    // console.log(text);
-    setText("");
-  };
+function Todo({ todo, index, completeTodo, removeTodo }) {
+  const textDecoration = todo.isComplete ? "line-through" : "";
   return (
-    <form onSubmit={submitInput}>
-      <input
-        className="TodoForm"
-        type="text"
-        placeholder="Add a new todo.."
-        onChange={e => setText(e.target.value)}
-        value={text}
-      />
-    </form>
+    <div className="Todo" style={{ textDecoration: textDecoration }}>
+      {todo.text}
+      <div>
+        <button onClick={() => completeTodo(index)}>Complete</button>
+        <button onClick={() => removeTodo(index)}>X</button>
+      </div>
+    </div>
   );
 }
 
-function Todo({ todo, index, completeTodo, removeTodo }) {
+function TodoForm({ addTodo }) {
+  const [text, setText] = useState("");
+  const SubmitForm = e => {
+    e.preventDefault();
+    if (!text) return;
+    addTodo(text);
+    setText("");
+    // console.log(text);
+  };
   return (
-    <div className="Todo">
-      <span
-        className="todo__text"
-        style={{ textDecoration: todo.isComplete ? "line-through" : "" }}
-      >
-        {todo.text}
-      </span>
-      <span className="buttons">
-        <button className="todo__complete" onClick={() => completeTodo(index)}>
-          Complete
-        </button>
-        <button className="todo__remove" onClick={() => removeTodo(index)}>
-          X
-        </button>
-      </span>
-    </div>
+    <form onSubmit={SubmitForm}>
+      <input
+        type="text"
+        className="input"
+        placeholder="Add a new todo.."
+        value={text}
+        onChange={e => setText(e.target.value)}
+      />
+    </form>
   );
 }
 
@@ -50,6 +42,11 @@ function App() {
     { text: "todo2", isComplete: false },
     { text: "todo3", isComplete: false }
   ]);
+  const addTodo = text => {
+    const newTodo = { text: text, isComplete: false };
+    const newTodos = [...todos, newTodo];
+    setTodos(newTodos);
+  };
   const completeTodo = index => {
     const updateTodos = [...todos];
     updateTodos[index].isComplete = true;
@@ -60,14 +57,9 @@ function App() {
     updateTodos.splice(index, 1);
     setTodos(updateTodos);
   };
-  const addNewTodo = text => {
-    const newTodo = { text: text, isComplete: false };
-    const updateTodos = [...todos, newTodo];
-    setTodos(updateTodos);
-  };
   return (
     <div className="App">
-      <div className="todo-list">
+      <div className="todos">
         {todos.map((todo, index) => (
           <Todo
             key={index}
@@ -77,7 +69,7 @@ function App() {
             removeTodo={removeTodo}
           />
         ))}
-        <TodoForm addNewTodo={addNewTodo} />
+        <TodoForm addTodo={addTodo} />
       </div>
     </div>
   );
