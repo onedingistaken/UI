@@ -15,4 +15,4 @@ class Frame extends React.Component {
     }
 }
 
-export default Frame 
+export default Frame

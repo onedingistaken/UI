@@ -1,0 +1,69 @@
+.App {
+  box-sizing: border-box
+}
+
+.Products,
+.Cart {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  margin-top    : 20px;
+}
+
+.Product {
+  border         : 1px solid #051e90;
+  width          : 500px;
+  margin-bottom  : 10px;
+  padding        : 10px;
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+  font-size      : 12px;
+}
+
+.product__title {
+  font-weight: 600
+}
+
+.product__addButton,
+.product__deleteButton {
+  background-color: #051e90;
+  color           : #fff;
+  border          : none;
+  cursor          : pointer;
+}
+
+.product__addButton:hover {
+  background-color: #d6621e;
+}
+
+.Navigation {
+  background-color: #051e90;
+  height          : 40px;
+  display         : flex;
+  flex-direction  : row;
+  align-items     : center;
+  justify-content : center;
+  font-size       : 12px;
+}
+
+.Navigation>* {
+  background-color: inherit;
+  color           : #fff;
+  text-decoration : none;
+  border          : none;
+  border-radius   : 3px;
+  margin          : 0 10px;
+  padding         : 5px;
+  width           : 60px;
+  text-align      : center;
+}
+
+.Navigation>*:hover {
+  background-color: #fff;
+  color           : #051e90;
+}
+
+.Navigation span {
+  height: inherit;
+}

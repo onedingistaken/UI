@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+const SimpleTodoList = React.lazy(() => import("./SimpleTodoList"));
+
 function Counter() {
   const [count, setCount] = useState(0);
   // effect hook
@@ -25,6 +27,9 @@ function App() {
     <div className="App">
       <div className="header">Hello App</div>
       <Counter />{" "}
+      <Suspense fallback={<div>Loading...</div>}>
+        <SimpleTodoList />
+      </Suspense>
     </div>
   );
 }
